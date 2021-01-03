@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = parseFloat(
+        prompt("Введите число которое хотите возвести в степень")
+      );
+      let m = parseInt(
+        prompt("Введите степень в который хотите возвести число")
+      );
+
+      let exponentiation = (number, power) => {number ** power};
+
+      function exponentiation(number, power) {
+        return number ** power;
+      }
+
+      if (isNaN(n) || isNaN(m)) {
+        if (isNaN(n) && isNaN(m)) {
+          alert(`Оба ввведенных значения не являются численными`);
+        } else if (isNaN(n)) {
+          alert(`Первое ввведенное значение не являeтся численным`);
+        } else if (isNaN(m)) {
+          alert(`Второе ввведенное значение не являeтся численным`);
+        }
+      } else {
+        alert(exponentiation(n, m));
+      }
+    </script>
+  </body>
+</html>
