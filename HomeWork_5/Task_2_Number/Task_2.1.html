@@ -8,13 +8,11 @@
   <body>
     <script>
       let n = parseFloat(
-        prompt("Введите число которое хотите возвести в степень")
+        prompt("Введите первое число которое хотите умножить и округлить")
       );
-      let m = parseInt(
-        prompt("Введите степень в который хотите возвести число")
+      let m = parseFloat(
+        prompt("Введите второе число которое хотите умножить и округлить")
       );
-
-      let exponentiation = (number, power) => number ** power;
 
       if (isNaN(n) || isNaN(m)) {
         if (isNaN(n) && isNaN(m)) {
@@ -25,7 +23,13 @@
           alert(`Второе ввведенное значение не являeтся численным`);
         }
       } else {
-        alert(exponentiation(n, m));
+        alert(
+          `Первое число до умножения ${n}, после умножения на 0.3 и округления - ${Math.round(
+            n * 0.3
+          )} \nВторое число до умножения ${m}, после умножения на 0.3 и округления - ${Math.round(
+            m * 0.3
+          )}`
+        );
       }
     </script>
   </body>

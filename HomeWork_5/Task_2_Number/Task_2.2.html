@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+      }
+
+      let n = parseInt(prompt("Введите минимальное число диапазона"));
+      let m = parseInt(
+        prompt("Введите второе число которое хотите умножить и округлить")
+      );
+
+      if (isNaN(n) || isNaN(m)) {
+        if (isNaN(n) && isNaN(m)) {
+          alert(`Оба ввведенных значения не являются численными`);
+        } else if (isNaN(n)) {
+          alert(`Первое ввведенное значение не являeтся численным`);
+        } else if (isNaN(m)) {
+          alert(`Второе ввведенное значение не являeтся численным`);
+        }
+      } else if (n > m) {
+        alert("Вы ввели сначало верхнюю границу потом нижнюю");
+        alert(`Рандомное число от ${m} до ${n} - ${getRandomInt(m, n)}`);
+      } else {
+        alert(`Рандомное число от ${n} до ${m} -  ${getRandomInt(n, m)}`);
+      }
+    </script>
+  </body>
+</html>
