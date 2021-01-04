@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const substring = prompt(
+        "Введите подстроку которую необходимо найти в строке"
+      );
+      const string = prompt("Введите строку для поиска подстроки");
+
+      let pos = -1;
+      let counter = 0;
+      let allIndex = "";
+
+      while ((pos = string.indexOf(substring, pos + 1)) != -1) {
+        counter += 1;
+        allIndex += `${pos}, `;
+      }
+
+      alert(
+        `В строке "${string}" найдена подстрока "${substring}" ${counter} раз.\nИндексы начала вхождения - ${allIndex}`
+      );
+    </script>
+  </body>
+</html>
